@@ -3,7 +3,11 @@ var mongoose = require('mongoose');
 
 
 // Connect to the database
-mongoose.connect('mongodb://test:zk1991zk@ds149201.mlab.com:49201/jx');
+mongoose
+  .connect('mongodb://test:zk1991zk@ds149201.mlab.com:49201/jx')
+  // .connect('mongodb://mongo:27017/node-todolist')
+  .then(() => console.log("您已连接mongodb数据库"))
+  .catch(err => console.log(err))
 
 //create a schema - this is like a blueprint
 var todoSchema = new mongoose.Schema({
@@ -15,7 +19,7 @@ var Todo = mongoose.model('Todo', todoSchema);
 // var itemOne = Todo({item: 'buy flowers'}).save(function(err){
 //   if (err) throw err;
 //   console.log('item saved');
-// });
+// }); 
 
 
 //var data = [{item: '喝牛奶'},{item: '刷代码'},{item: '遛狗'}];
