@@ -4,8 +4,8 @@ var mongoose = require('mongoose');
 
 // Connect to the database
 mongoose
-  .connect('mongodb://test:zk1991zk@ds149201.mlab.com:49201/jx')
-  // .connect('mongodb://mongo:27017/node-todolist')
+  // .connect('mongodb://test:zk1991zk@ds149201.mlab.com:49201/jx')
+  .connect('mongodb://mongo:27017/node-todolist')
   .then(() => console.log("您已连接mongodb数据库"))
   .catch(err => console.log(err))
 
