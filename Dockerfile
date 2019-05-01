@@ -1,5 +1,5 @@
 # build stage
-FROM node:10 as buid-stage
+FROM node:10.15.3-alpine as buid-stage
 
 WORKDIR /usr/src/app
 
