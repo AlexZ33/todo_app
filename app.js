@@ -1,6 +1,7 @@
 const path = require('path')
 const express = require('express');
 const todoController = require('./controllers/todoController');
+const { port } = require('./config/config.default')
 
 const app = express();
 
@@ -24,5 +25,5 @@ todoController(app);
 
 
 // 监听端口
-app.listen(3000);
+app.listen(port);
 console.log('You are listening to port 3000');

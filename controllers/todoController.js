@@ -1,11 +1,15 @@
 const bodyParser = require ('body-parser');
 const mongoose = require('mongoose');
+const { URL } = require('url')
+const config = require('../config/config.default')
 
-
+console.log("默认配置", config)
+// const url = new URL(config.mongoose);
 // Connect to the database
 mongoose
+  .connect(config.mongoose.url)
   // .connect('mongodb://test:zk1991zk@ds149201.mlab.com:49201/jx')
-  .connect('mongodb://mongo:27017/node-todolist')
+  // .connect('mongodb://mongo:27017/node-todolist')
   .then(() => console.log("您已连接mongodb数据库"))
   .catch(err => console.log(err))
 
