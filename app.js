@@ -1,7 +1,8 @@
-var express = require('express');
-var todoController = require('./controllers/todoController');
+const path = require('path')
+const express = require('express');
+const todoController = require('./controllers/todoController');
 
-var app = express();
+const app = express();
 
 
 

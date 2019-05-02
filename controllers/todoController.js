@@ -1,5 +1,5 @@
-var bodyParser = require ('body-parser');
-var mongoose = require('mongoose');
+const bodyParser = require ('body-parser');
+const mongoose = require('mongoose');
 
 
 // Connect to the database
